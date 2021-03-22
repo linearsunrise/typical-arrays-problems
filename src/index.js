@@ -15,5 +15,10 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (array === undefined || array.length === 0) { return 0 };
+  let sum = 0;
+  for (i = 0; i < array.length; i++) { sum += array[i] }
+  // let sum = array.reduce((val, acc) => acc + val);
+
+  return sum / array.length;
 }
